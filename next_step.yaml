@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "updated": "2026-09-02",
+  "status": "architecture_owner_bootstrap",
+  "objective": "Keep graph analytics distinct from CUDA-MCGS search while composing generic CUDA, data, RNG and communication owners through public contracts.",
+  "authority": ["AGENTS.md", "docs/PROJECT_CHARTER.md", "docs/decisions/ADR-0001-independent-graph-analytics-owner.md"],
+  "current_focus": {"issue": 3, "status": "not_activated", "next_action": "After bootstrap integration, select a bounded graph representation plus first traversal/analytics profile and prove the MCGS boundary; implementation still requires an accepted spec."},
+  "parallel_governance": {"issue": 2, "status": "blocked_on_control_plane_mutation"},
+  "do_not": ["reuse MCGS Search IR as graph-analytics core", "select cuGraph/RAPIDS as semantic authority", "move data/RNG/communication ownership into this repo", "claim implementation or multi-GPU support from repository creation"]
+}
