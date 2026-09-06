@@ -1,3 +1,7 @@
-# CUDA-GRAPH-ANALYTICS Specifications
+# CUDA-GRAPH-ANALYTICS specifications
 
-No production specifications are accepted yet. Issue #3 is roadmap/assessment only; a bounded graph representation and algorithm contract must be accepted before implementation.
+**No production specifications are accepted yet.**
+
+The [activation roadmap](https://github.com/iteathen/cuda-graph-analytics/issues/3) organizes assessment. Implementation must first have a bounded, consumer-backed contract accepted under the [development instructions](../../AGENTS.md).
+
+Start with the [project charter](../PROJECT_CHARTER.md) and [architecture decision](../decisions/README.md) to understand the intended scope.

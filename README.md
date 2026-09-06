@@ -1,11 +1,23 @@
-# cuda-graph-analytics
+# CUDA-GRAPH-ANALYTICS
 
-Reusable GPU graph representation and graph-analytics semantics, deliberately separate from CUDA-MCGS search semantics.
+CUDA-GRAPH-ANALYTICS is a planned JavaScript library for reusable GPU graph analysis in the CUDA-JS ecosystem, intended for developers building GPU applications.
 
-**Status:** architecture/governance bootstrap; production implementation not authorized.
+## Current state
 
-This repository owns graph-analysis meaning such as BFS/SSSP, components, centrality, PageRank, community and similarity when accepted. CUDA-MCGS owns decision/search progression and its search graph lifecycle.
+This repository currently contains the project charter, architecture decision, development guidance, and planning records. **There is no production implementation, installable package, or public API yet.** No native-provider support or performance is claimed.
 
-Tracking: #1 ownership/bootstrap, #2 repository controls, #3 graph/algorithm roadmap.
+## Intended scope
 
-No package/API/provider/support/performance claim exists yet.
+The library aims to define graph representations, traversal and paths, components, centrality, and related analytics through public CUDA-JS contracts.
+
+This concerns analysis of graph data. CUDA-MCGS separately owns decision-search progression and search lifecycles. No cuGraph provider has been selected.
+
+Implementation depends on a concrete consumer need and an accepted specification. The [activation roadmap](https://github.com/iteathen/cuda-graph-analytics/issues/3) describes candidate work; it is not a commitment that every proposed capability will ship.
+
+## Start here
+
+- [Current status](STATUS.md).
+- [Project charter](docs/PROJECT_CHARTER.md) and [documentation](docs/README.md).
+- [Development instructions](AGENTS.md) and [shared contribution guide](https://github.com/iteathen/.github/blob/main/CONTRIBUTING.md).
+- [Private security reporting](https://github.com/iteathen/.github/blob/main/SECURITY.md).
+- [License](LICENSE).
