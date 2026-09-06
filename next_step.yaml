@@ -1,10 +1,20 @@
 {
-  "schema_version": 1,
-  "updated": "2026-09-02",
-  "status": "architecture_owner_bootstrap",
+  "schema_version": 2,
+  "updated": "2026-09-05",
+  "status": "architecture_owner_integrated_consumer_activation_gated",
   "objective": "Keep graph analytics distinct from CUDA-MCGS search while composing generic CUDA, data, RNG and communication owners through public contracts.",
   "authority": ["AGENTS.md", "docs/PROJECT_CHARTER.md", "docs/decisions/ADR-0001-independent-graph-analytics-owner.md"],
-  "current_focus": {"issue": 3, "status": "not_activated", "next_action": "After bootstrap integration, select a bounded graph representation plus first traversal/analytics profile and prove the MCGS boundary; implementation still requires an accepted spec."},
-  "parallel_governance": {"issue": 2, "status": "blocked_on_control_plane_mutation"},
-  "do_not": ["reuse MCGS Search IR as graph-analytics core", "select cuGraph/RAPIDS as semantic authority", "move data/RNG/communication ownership into this repo", "claim implementation or multi-GPU support from repository creation"]
+  "completed": {"issue": 1, "state": "ownership_bootstrap_integrated"},
+  "current_focus": {
+    "issue": 3,
+    "status": "consumer_selection_required",
+    "next_action": "Select one bounded graph representation plus first traversal/analytics profile now that ownership is integrated. Prove the CUDA-MCGS search boundary explicitly, classify any data/RNG/communication semantic dependencies, and accept a bounded specification before production implementation."
+  },
+  "parallel_governance": {"issue": 2, "status": "main_unprotected_control_plane_alignment_open"},
+  "do_not": [
+    "reuse MCGS Search IR as graph-analytics core",
+    "select cuGraph/RAPIDS as semantic authority",
+    "move data/RNG/communication ownership into this repo",
+    "claim implementation or multi-GPU support from repository creation or completed governance"
+  ]
 }
