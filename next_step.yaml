@@ -1,20 +1,29 @@
 {
   "schema_version": 2,
-  "updated": "2026-09-05",
+  "updated": "2026-09-06",
   "status": "architecture_owner_integrated_consumer_activation_gated",
-  "objective": "Keep graph analytics distinct from CUDA-MCGS search while composing generic CUDA, data, RNG and communication owners through public contracts.",
-  "authority": ["AGENTS.md", "docs/PROJECT_CHARTER.md", "docs/decisions/ADR-0001-independent-graph-analytics-owner.md"],
-  "completed": {"issue": 1, "state": "ownership_bootstrap_integrated"},
+  "objective": "Keep graph analytics distinct from CUDA-MCGS search while composing native CUDA, data, RNG, communication and any future generic algorithm owners through public contracts.",
+  "authority": [
+    "AGENTS.md",
+    "docs/PROJECT_CHARTER.md",
+    "docs/specs/SPEC-0001-native-boundary-and-js-only-implementation.md",
+    "docs/decisions/ADR-0001-independent-graph-analytics-owner.md"
+  ],
+  "completed": {
+    "ownership_bootstrap_issue": 1,
+    "repository_governance_issue": 2,
+    "repository_governance_state": "protected_main_aligned"
+  },
   "current_focus": {
     "issue": 3,
     "status": "consumer_selection_required",
-    "next_action": "Select one bounded graph representation plus first traversal/analytics profile now that ownership is integrated. Prove the CUDA-MCGS search boundary explicitly, classify any data/RNG/communication semantic dependencies, and accept a bounded specification before production implementation."
+    "next_action": "Select one bounded graph representation plus first traversal/analytics profile. Prove the CUDA-MCGS search boundary, classify data/RNG/communication dependencies, and accept a bounded specification before production implementation."
   },
-  "parallel_governance": {"issue": 2, "status": "main_unprotected_control_plane_alignment_open"},
   "do_not": [
     "reuse MCGS Search IR as graph-analytics core",
     "select cuGraph/RAPIDS as semantic authority",
     "move data/RNG/communication ownership into this repo",
+    "move graph or generic algorithm semantics into CUDA-JS merely because they run on GPU",
     "claim implementation or multi-GPU support from repository creation or completed governance"
   ]
 }
